@@ -71,7 +71,7 @@ The private key is used only by the trusted signer service.
 
 ---
 
-## Step 3 — Create a CloudFront Public Key (Console)
+## Step 3 — Create a CloudFront Public Key (AWS Console)
 
 1. AWS Console → **CloudFront**
 2. Left nav → **Public keys**
@@ -90,7 +90,7 @@ Record:
 
 ---
 
-## Step 4 — Create a Key Group (Console)
+## Step 4 — Create a Key Group (AWS Console)
 
 1. CloudFront → **Key groups**
 2. Click **Create key group**
@@ -103,7 +103,7 @@ Record:
 
 ---
 
-## Step 5 — Create an Origin Access Control (OAC) (Console)
+## Step 5 — Create an Origin Access Control (OAC) (AWS Console)
 
 1. CloudFront → Left nav → **Origin access**
 2. Click **Create control**
@@ -118,7 +118,7 @@ Record:
 
 ---
 
-## Step 6 — Create the CloudFront Distribution (Console)
+## Step 6 — Create the CloudFront Distribution (AWS Console)
 
 1. CloudFront → **Distributions** → **Create distribution**
 2. **Origin**
