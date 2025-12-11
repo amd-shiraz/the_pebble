@@ -1,4 +1,5 @@
-# CloudFront Internal-Only Access (Option 1: Signed URLs / Signed Cookies) — Manual AWS Console Runbook
+# CloudFront Internal-Only Access (Option 1: Signed URLs / Signed Cookies) — Manual AWS Console Runbook 
+(We will move to terraform later)
 
 **Goal:** Make CloudFront content *cryptographically private* so that **only requests with valid CloudFront signatures** can download artifacts.  
 **best way is to use WAF. No IP allowlists. however we dont know yet what the WAF cldr list of IPs is -- this is work in progress to find that info**    
