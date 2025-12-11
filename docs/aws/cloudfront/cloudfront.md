@@ -18,8 +18,8 @@ CloudFront will be publicly reachable, but our objects are **not** publicly acce
 ### Request flow
 
 1. User/service requests a download from **source** (or your “signer” API).
-2. You authorizes the request (customer entitlement / login / IAM / etc.).
-3. You returns a **signed CloudFront URL** (or sets signed cookies).
+2. You authorize the request (customer entitlement / login / IAM / etc.)
+3. You return a **signed CloudFront URL** (or sets signed cookies).
 4. User downloads from CloudFront using the signed URL/cookies.
 5. CloudFront validates signature using **public key** and serves content; otherwise **403**.
 
