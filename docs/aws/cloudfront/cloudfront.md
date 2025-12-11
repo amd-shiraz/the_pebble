@@ -1,4 +1,4 @@
-# CloudFront Internal-Only Access (Option 1: Signed URLs / Signed Cookies) — Manual AWS Console Runbook 
+# CloudFront Internal-Only Access — Manual AWS Console Runbook 
 (We will move to terraform later)
 
 **Goal:** Make CloudFront content *cryptographically private* so that **only requests with valid CloudFront signatures** can download artifacts.  
