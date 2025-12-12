@@ -340,7 +340,7 @@ Signed URLs are best for:
 
 ---
 
- AWS WAF (IP-Based Restrictions)
+## AWS WAF (IP-Based Restrictions)
 
 ---
 
