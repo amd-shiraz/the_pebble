@@ -339,3 +339,69 @@ Signed URLs are best for:
 - artifact download links emailed to users
 
 ---
+
+ AWS WAF (IP-Based Restrictions)
+
+---
+
+## When to use WAF
+- Corporate/VPN-only access
+- Geo restrictions
+- Rate limiting
+- Audit/compliance needs
+
+---
+
+## Step B1 — Create IP Set
+
+1. AWS Console → WAF & Shield → IP sets
+2. Scope: CloudFront
+3. Add corporate CIDRs
+
+---
+
+## Step B2 — Create Web ACL
+
+1. WAF → Web ACLs → Create
+2. Scope: CloudFront
+3. Default action: Block
+
+---
+
+## Step B3 — Add Allow Rule
+
+- Condition: IP in IP set
+- (Optional) AND URI path starts with `/internal/`
+- Action: Allow
+
+---
+
+## Step B4 — Associate with CloudFront
+
+1. Web ACL → Associations
+2. Add CloudFront distribution
+
+---
+
+## WAF Validation
+
+| Scenario | Result |
+|------|------|
+| Corp IP + signed URL | Allowed |
+| Corp IP + unsigned URL | 403 |
+| Non-corp IP | Blocked |
+| Direct S3 access | Denied |
+
+---
+
+## Recommendation
+
+- Use **Signed URLs as primary control**
+- Add **WAF only if network-based control is required**
+- Never rely on WAF alone for private content
+
+
+
+
+
+
